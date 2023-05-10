@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Theme from './components/ThemContext';
+import ThemSwitcher from './components/ThemeSwitcher';
+import CheckUserContext from './components/Credentials/CheckUserContext';
+import TrueUser from './components/TrueUser';
+import UseMemoComp from './components/UseMemo';
+import CalculatorComp from './components/Calculator/CalculatorComponenet';
 
-function App() {
+const App = function () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CheckUserContext>
+        <Theme>
+          <ThemSwitcher />
+          <TrueUser/>
+      {/* <UseMemoComp /> */}
+        </Theme>
+      </CheckUserContext>/
+      <hr />
+      <CalculatorComp />
     </div>
-  );
+  )
 }
 
 export default App;
