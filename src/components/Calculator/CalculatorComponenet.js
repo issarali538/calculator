@@ -37,7 +37,7 @@ function CalculatorComp() {
                 result = parseInt(valA) * parseInt(valB);
                 break;
 
-            case "/":
+            case "%":
                 result = parseInt(valA) / parseInt(valB);
                 break;
             default:
@@ -105,7 +105,7 @@ function CalculatorComp() {
                         <button data-text="sub_btn" onClick={() => operation('-')} className="calculator-button add-btn">-</button>
                     </div>
                     <div className="button-wrapper">
-                        <button data-text="multi_bt" onClick={() => operation('/')} className="calculator-button sub-btn">%</button>
+                        <button data-text="multi_bt" onClick={() => operation('%')} className="calculator-button sub-btn">%</button>
                     </div>
                     <div className="button-wrapper">
                         <button data-text="div_btn" onClick={() => operation('x')} className="calculator-button multi-btn">x</button>
